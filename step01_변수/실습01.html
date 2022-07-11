@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 실습 01</title>
+</head>
+
+<body>
+    <div id="box">나는 박스입니다 :) 실습하기</div>
+    <div id="box2">나는 박스입니다 :) 실습하기</div>
+    <div id="box3" onclick="글자바꾸기2()">나는 박스입니다 :) 실습하기</div>
+
+    <script>
+        const BOX = document.getElementById('box');
+        const BOX2 = document.getElementById('box2');
+        const BOX3 = document.getElementById('box3');
+        console.log(BOX, typeof (BOX));
+
+        const 글자바꾸기 = function () {
+            this.innerText = '글자가 바꿔질까요'
+        }
+
+        function 글자바꾸기2() {
+            BOX3.innerText = '아에이오우'
+        } // 리액트에서 주로 사용할 방법 // 쓰기 전에 선언이 되어있어야 함
+
+        BOX.addEventListener('click', 글자바꾸기);
+
+        BOX2.onclick = function () {
+            this.innerText = '두번째 박스도 바꿔보기'
+        }
+    </script>
+</body>
+
+</html>
