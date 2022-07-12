@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 01 - 산술연산자</title>
+</head>
+
+<body>
+    <script>
+        let a = 1;
+        let b = 2;
+
+        let A = '1';
+        let B = '2';
+
+        const D = '댕댕이';
+
+        console.log(a + b);
+
+        let C = A + B;
+        console.log(C, typeof (C));
+
+        let E = a + A;
+        console.log(E);
+        // 자동으로 형변환이 일어남 -- javascript의 특징
+        // (숫자+문자=문자, 오류가 나야되는데 안남)
+
+        console.log(a - b, A - B);
+        console.log(a - B, B - a, A * B, A / B, 1 / 0);
+        // 자동으로 형변환이 일어나서 숫자 계산이 됨
+
+        let F = 10;
+        let G = 3;
+
+        F % 2 ? console.log('홀수') : console.log('짝수');
+        // F값에 따라서 홀수,짝수 판별함
+
+        console.log(F % 2, G % 2, F % G);
+        // 나누고 나서 나머지 값 반환
+    </script>
+</body>
+
+</html>

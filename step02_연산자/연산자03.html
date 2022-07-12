@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 03 - 논리연산자</title>
+</head>
+
+<body>
+    <script>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '댕댕이'
+
+        console.log(참, 거짓);
+        console.log(!참, !거짓);
+        // ! -- NOT 부정연산자
+        console.log(참 && 거짓, 참 && 참);
+        // && -- AND 그리고 연산자
+        // 하나라도 거짓이면 false, 둘 다 참일때만 true
+        console.log(거짓 || 참, 거짓 || 거짓);
+        // || -- OR 또는연산자
+        // 하나라도 참이면 true
+        a ? console.log(a + ' 진실') : console.log('거짓말')
+        // 공간이 없는 ''이면 거짓으로 판별함
+        if (!a) {
+            console.log(a + ' 진실')
+        } else {
+            console.log('거짓말')
+        }
+        // a ? console.log()와 똑같음/ !a라서 거짓말
+
+        a && console.log(a + ' 진실')
+        // 아래 if문과 똑같음
+        if (a) {
+            console.log(a + ' 진실')
+        }
+
+        a || console.log('거짓말');
+        // 참이라서 진실이 나옴
+
+    </script>
+</body>
+
+</html>

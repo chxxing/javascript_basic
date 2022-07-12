@@ -23,7 +23,8 @@
         );
 
         // 각 변수들의 자료형을 찍어봄.
-        // 숫자(number), 문자 (string), 참/거짓 (boolean), undefined, 객체 (null); 
+        // 원시형 : 숫자 (number), 문자 (string), 참/거짓 (boolean), undefined, null;
+        // 객체(object), 배열(Array), 함수(function);
 
         console.log(
             typeof (a),
@@ -48,13 +49,41 @@
 
         console.log(
             Boolean(TA),
-            Boolean(TB), // 공백과 문자는 true
+            Boolean(TB), // 문자는 true, 공백은 false
             Boolean(TC),
             Boolean(TD), // true, 나머지는 다 false
             Boolean(TE),
             Boolean(TF),
         );
 
+        const 객체 = {
+            name: '강아지',
+            age: 6,
+            work: function () {
+                console.log('왈왈멍멍')
+            }
+        }
+        // { 객체의 성질들 } , 객체 안에 들어있는 함수를 메소드라고 부름
+        // value: 'property'
+
+        console.log(객체);
+        console.log(객체.name, 객체['name']);
+        // 둘다 객체의 name을 불러오는 방식
+
+        const 배열 = [1, 2, 3, 4, 5];
+        // 순서가 있는 자료의 모음
+
+        console.log(배열);
+        // index는 0부터 시작, length는 배열의 길이
+        console.log(배열[0]);
+
+        const 함수 = function () {
+            return '나는 함수';
+        }
+        // 함수표현식
+
+        console.log(함수());
+        // 함수를 실행할 때는 ()쓰기
 
     </script>
 </body>
