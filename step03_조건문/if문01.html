@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 01 - if문01</title>
+</head>
+
+<body>
+    <div id="txt"></div>
+
+    <script>
+
+        let age = 10;
+        // if문만 있어도 됨. else생략해도 무방.
+        if (age > 9) {
+            console.log('hello')
+        }
+        // 논리연산자를 사용한 조건부 실행
+        age > 9 && console.log('hello')
+
+        // if 만약에 ()이 참으로 판별되면 {} 블록을 실행하라.
+        if (age > 9) {
+            console.log('hello')
+        } else {
+            console.log('bye')
+        };
+        // 위의 if문과 아래문장이랑 똑같은 의미
+        // 삼항연산자를 이용한 조건부 실행, if와 else 조건 두개 다 적어주기
+        age > 9 ? console.log('hello') : console.log('bye');
+
+        // txt.innerText = 'Hello ' + age + '살 어린이 반가워요';
+        txt.innerText = `Hello ${age}살 어린이
+        반가워요`;
+
+    </script>
+</body>
+
+</html>
