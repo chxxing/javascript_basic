@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 01 - for문01</title>
+</head>
+
+<body>
+    <div id="num">0</div>
+    <ul id="list">
+        <li>sum01</li>
+        <li>sum02</li>
+        <li>sum03</li>
+        <li>sum04</li>
+    </ul>
+
+    <script>
+
+        const UL = document.querySelector('#list');
+        console.log(UL);
+        // querySelector는 하나만 가져옴
+
+        const LI = document.querySelectorAll('#list li');
+        console.log(LI);
+        // querySelectorAll는 다 가져옴
+        // Nodelist-유사배열;
+
+        for (let i = 0; i < LI.length; i++) {
+            LI[i].style.color = 'red';
+        }
+        // i자리에 변수를 넣을 수 있음 -- t
+        // LI.forEach(el => el.style.color = 'red')
+        // LI.forEach(function (el) {
+        //     el.style.fontSize = '15px';
+        // })
+
+        // UL.addEventListener('click', function () {
+        //     console.log(this)
+        // });
+
+        // $('#list li').on('click', function () {
+        //     $('#list li').css({ color: 'blue' });
+        //     $(this).css({ color: 'yellow' })
+        // }) -- jquery
+
+        const NUM = document.querySelector('#num');
+        const 자료 = ['하나', '둘둘', '셋셋', '넷넷'];
+
+        LI.forEach((el, idx) => {
+            el.addEventListener('click', function () {
+                LI.forEach(el => el.style.color = 'blue');
+                el.style.color = 'yellow';
+                NUM.innerText = 자료[idx];
+            })
+        });
+        // LI.forEach(el => {
+        //     el.addEventListener('click', function () {
+        //         LI.forEach(el => el.style.color = 'blue');
+        //         el.style.color = 'yellow'
+        //     })
+        // }); -- 화살표 function
+
+
+        console.log(자료);
+
+        for (i = 0; i < 자료.length; i++) {
+            console.log(자료[i]);
+        }
+
+        for (i = 1; i < 10; i++) {
+            console.log(i)
+        }
+
+    </script>
+</body>
+
+</html>
