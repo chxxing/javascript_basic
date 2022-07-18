@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 01</title>
+</head>
+
+<body>
+    <div id="App"></div>
+    <script>
+        이름('갱얼쥐', '잔다.');
+
+        function 이름(a, b) {
+            console.log(a, b)
+        }
+
+        // 함수표현식 변수에 담긴 함수는 호이스팅 되지 않는다.
+        const 이름2 = function (a) {
+            console.log(a)
+        }
+
+        이름2('나함수');
+
+        // 화살표 함수 표현식(arrow function), 무명함수, 함수를 변수에 할당해 놓은 상태
+        // 매개변수가 하나일때는 괄호 생략 가능
+        const 이름3 = a => {
+            console.log(a)
+        }
+        // const 이름3 = a => console.log(a);
+
+        이름3('나는 화살표 함수');
+
+        const 이름4 = (a, b) => console.log(a, b);
+
+        이름4('화살표함수', 'hi')
+
+    </script>
+</body>
+
+</html>
