@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 06</title>
+</head>
+
+<body>
+    <ul id="UL"></ul>
+    <script>
+        const DATA = [
+            { id: 1, content: "메로나", date: "2022년 07월 21일" },
+            { id: 2, content: "바밤바", date: "2022년 07월 25일" },
+            { id: 3, content: "월드콘", date: "2022년 08월 01일" },
+            { id: 4, content: "거북알", date: "2022년 08월 11일" },
+            { id: 5, content: "메로나", date: "2022년 09월 27일" }
+        ]
+
+        // filter의 조건에 맞는 것만 걸러서 새로운 배열제시
+        const RESULT = DATA.filter(el => el.id !== 3);
+        const NEWLIST = RESULT.map(data => `<li>${data.content} <small>${data.date}</small></li>`).join('')
+        // console.log(NEWLIST);
+        UL.innerHTML = NEWLIST;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 05</title>
+</head>
+
+<body>
+    <ul id="UL"></ul>
+    <script>
+        const DATA = [
+            { id: 1, content: "메로나", date: "2022년 07월 21일" },
+            { id: 2, content: "바밤바", date: "2022년 07월 21일" },
+            { id: 3, content: "월드콘", date: "2022년 07월 21일" },
+            { id: 4, content: "거북알", date: "2022년 07월 21일" },
+            { id: 5, content: "보석바", date: "2022년 07월 21일" }
+        ]
+
+        // 콜백함수
+        // join() : 배열의 요소를 연결해 하나의 문자로 만듬. -- 아직 중요하진않음
+        // el자리에 data,state 등 이름 지어주면 됨
+        const RESULT = DATA.map(el => `<li>${el.content}</li>`).join('');
+        console.log(RESULT);
+        document.querySelector('#UL').innerHTML = RESULT;
+
+        // <ul id="UL">
+        //     {
+        //         DATA.map(
+        //             <li>{data.content}</li>
+        //         )
+        //     }
+        // </ul>
+
+
+    </script>
+</body>
+
+</html>
